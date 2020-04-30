@@ -1,0 +1,29 @@
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+.corpo {
+  display: grid;
+  
+  justify-content: center;
+  align-content: center;
+  
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  width: 100%;
+  min-width: 480px;
+
+  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+
+  border-radius: 8px;
+  background: #c4d49f;
+  padding: 10px;
+}
