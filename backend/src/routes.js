@@ -15,6 +15,7 @@ routes.get('/animais', animalController.index);
 
 //Rota dos usuários
 routes.get('/usuarios', usuariosCotroller.index);
+routes.get('/animais/dono/:id', usuariosCotroller.usuario);
 routes.put('/usuarios/novo', usuariosCotroller.create);
 routes.post('/usuarios/atualizar/:id', usuariosCotroller.update);
 routes.delete('/usuarios/excluir/:id', usuariosCotroller.delete);
