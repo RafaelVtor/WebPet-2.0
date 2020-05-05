@@ -10,6 +10,7 @@ export default function Logon () {
   const [usuario, setUsuario] = useState([])
   const [id, setNome] = useState([])
   const [senha, setSenha] = useState([])
+  const history = useHistory();
 
   async function login (e) {
     e.preventDefault()
@@ -21,6 +22,7 @@ export default function Logon () {
       });
       console.log(response);
       alert("Olá "+response.data.nome)
+      history.push('/animais')
     } catch {
       alert('Usuário ou senha incorreta')
     }

@@ -18,12 +18,19 @@ body {
   width: 100%;
   min-width: 480px;
 
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
+  margin-top: 23%;
+ 
+  
 
   border-radius: 8px;
   background: #c4d49f;
   padding: 10px;
+}
+
+.form{
+  width: 100%;
 }

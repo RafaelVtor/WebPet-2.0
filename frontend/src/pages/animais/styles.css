@@ -2,11 +2,15 @@ body {
   padding: 0px;
   margin: 0px;
 }
+p:hover{
+  text-decoration: none;
+}
 
+.link:link{
+  color: green;
+}
 .corpo {
-  display: grid;
-  
-  
+  display: grid;  
   justify-content: space-around;
   align-content: center;
   
@@ -23,6 +27,8 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
 
   border-radius: 8px;
   background: #c4d49f;
@@ -32,12 +38,13 @@ body {
 .miolo {
   flex: 1;
   flex-direction: row;
-  display: flex;
+  display: flex ;
   width: 400px;
   justify-content: space-between;
   margin: 20px;
   padding: 10px;
   border-style: groove;
+  text-decoration: none;
 }
 
 .img img {
