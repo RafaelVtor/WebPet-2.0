@@ -7,10 +7,12 @@ module.exports = {
     return response.json(usuarios)
   },
 
-  async usuario(request, response){
+  async usuario (request, response) {
     const { id } = request.params
-    const usuario = await connection('usuario').select('*').where('id', id)
-    return response.json(usuario);
+    const usuario = await connection('usuario')
+      .select('*')
+      .where('id', id)
+    return response.json(usuario)
   },
   /*
   async dono (request, response) {

@@ -17,6 +17,19 @@ module.exports = {
 
     return response.json(animais)
   },
+  async animal (request, response) {
+    const { id } = request.params
+
+    const animal = await connection('animal')
+      .select('*')
+      .where('id', id)
+
+    if (animal) {
+      return response.json(animal)
+    } else {
+      return response.json('erro  ')
+    }
+  },
 
   async index_usuario (request, response) {
     const usuario_id = request.headers.authorization

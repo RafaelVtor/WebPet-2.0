@@ -12,6 +12,7 @@ routes.post('/sessions', sessionsController.create);
 
 //Rotas dos animais
 routes.get('/animais', animalController.index);
+routes.get('/animais/animal/:id', animalController.animal);
 
 //Rota dos usuários
 routes.get('/usuarios', usuariosCotroller.index);
