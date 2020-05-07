@@ -17,7 +17,7 @@ export default function Animal (req) {
     <div>
       {animal.map(animal => (
         <h3 key={animal.id}>{animal.nome}</h3>
-  ))}
+      ))}
     </div>
   )
 }

@@ -1,6 +1,7 @@
 const connection = require('../../knexMysql')
 
 module.exports = {
+  //Selecionar todos os animais
   async index (request, response) {
     //teste com foreignkey
 
@@ -17,6 +18,8 @@ module.exports = {
 
     return response.json(animais)
   },
+
+  //Seleconar um animal específico
   async animal (request, response) {
     const { id } = request.params
 
@@ -31,6 +34,7 @@ module.exports = {
     }
   },
 
+  //para buscar animais de usuario identificado
   async index_usuario (request, response) {
     const usuario_id = request.headers.authorization
 
@@ -41,13 +45,24 @@ module.exports = {
     return response.json(animais)
   },
 
+  //buscar animais de usuario não autenticados
+  async index_animal (request, response) {
+    const { id } = request.params
+    
+    const animais = await connection('animal')
+      .where('dono', id)
+      .select('*')
+
+      return response.json(animais)
+  },
+
   async create (request, response) {
     const { nome, tipo, idade, vacinas, obs, foto } = request.body
     const dono = request.headers.authorization
 
     console.log(nome)
     console.log(tipo)
-    console.log(idade)
+    console.log(idade) 
     console.log(vacinas)
     console.log(obs)
     console.log(foto)

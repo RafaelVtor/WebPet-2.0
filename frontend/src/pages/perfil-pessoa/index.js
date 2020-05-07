@@ -1,22 +1,57 @@
-import React, { useEffect, useState } from 'react';
-import api from '../../services/api';
+import React, { useEffect, useState } from 'react'
+import api from '../../services/api'
 
+export default function Dono (props) {
+  const [dados, setDados] = useState([])
+  const [animais, setAnimais] = useState([])
 
-export default function Dono(id){
-  
-  
-  
-  const [ dados, setDados] = useState([])
+  console.log(props.match.params.id)
 
-  useEffect(()=>{
-    api.get(`http://localhost:3333/animais/dono/${id.match.params.id}`).then(response=>{
-      setDados(response)
-    })
-  },[])
-  
+  useEffect(() => {
+    api
+      .get(`http://localhost:3333/animais/dono/${props.match.params.id}`)
+      .then(response => {
+        setDados(response.data)
+      })
+  }, [])
 
-  console.log(dados)
-  
+  useEffect(() => {
+    api
+      .get(`/animais/animal-usuario/${props.match.params.id}`)
+      .then(response => {
+        setAnimais(response.data)
+      })
+  }, [])
 
-  return '23213';
+  console.log(animais)
+
+  return (
+    <div>
+      {dados.map(dado => {
+        return (
+          <ul key={dado.id}>
+            <li>Nome: {dado.nome}</li>
+            <li>Tel: {dado.tel}</li>
+            <li>E-mail: {dado.email}</li>
+          </ul>
+        )
+      })}
+      <div>
+        {animais.map(animal=>{
+          return(
+
+            <ul key={animal.id}>
+            <li>{animal.foto}</li>
+            <li>Nome: {animal.nome}</li>
+            <li>Tipo: {animal.tipo}</li>
+            <li>Idade: {animal.idade}</li>
+          </ul>
+        )
+        })}
+        <ul>
+
+        </ul>
+      </div>
+    </div>
+  )
 }
