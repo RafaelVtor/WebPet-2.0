@@ -10,16 +10,15 @@ p:hover{
   color: green;
 }
 .corpo {
-  display: grid;  
+  display: flex;  
   justify-content: space-around;
+  flex-wrap: wrap;
   align-content: center;
   
 }
 
 .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  display: flex;
   width: 100%;
   min-width: 480px;
 

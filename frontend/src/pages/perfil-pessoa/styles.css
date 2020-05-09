@@ -1,31 +1,46 @@
-.dono{
-  align-self: initial;
-  width: 100%;
-  max-width: 1200px;
+body{
+  flex: 1;
+  display: grid;
+ 
+}
+.corpo-perfil {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;  
+  
+  background: blue;
+  opacity: 60%;
+  padding: 30px;
+}
+
+.dono {
+  flex: 1;
+  max-width: 500px;
   min-width: 400px;
+  height: 100%;
+  border-width: 5px;
+  background-color: blueviolet;
+  padding: 5px;
+  margin: 10px;
   
 }
-.lista-animais-dono{
-  display: grid;  
+
+.corpo-animais {
+  flex: 1;
+  height: 100%;
+  min-width: 400px;
+  border-width: 5px;
+  background: crimson;
+  padding: 5px;
+  margin: 10px;
   justify-content: space-around;
-  align-content: center;
 }
 
-.corpo-animais{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  width: 100%;
-  min-width: 480px;
-
-  justify-content: space-between;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-  margin-top: 5%;
-  margin-bottom: 5%;
-
-  border-radius: 8px;
-  background: #c4d49f;
-  padding: 10px;
+.lista-animais-dono {
+  background: springgreen;
+  height: 100%;
+  border-width: 5px;
+  padding: 5px;
+  margin: 10px;
 }

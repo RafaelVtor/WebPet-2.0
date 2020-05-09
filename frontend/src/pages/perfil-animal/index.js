@@ -15,9 +15,9 @@ export default function Animal (req) {
   })
   return (
     <div>
-      {animal.map(animal => (
-        <h3 key={animal.id}>{animal.nome}</h3>
-      ))}
+      {animal.map(animal => {
+        return <h3 key={animal.id}>{animal.nome}</h3>
+      })}
     </div>
   )
 }
