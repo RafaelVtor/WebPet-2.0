@@ -1,0 +1,31 @@
+.dono{
+  align-self: initial;
+  width: 100%;
+  max-width: 1200px;
+  min-width: 400px;
+  
+}
+.lista-animais-dono{
+  display: grid;  
+  justify-content: space-around;
+  align-content: center;
+}
+
+.corpo-animais{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  width: 100%;
+  min-width: 480px;
+
+  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+
+  border-radius: 8px;
+  background: #c4d49f;
+  padding: 10px;
+}

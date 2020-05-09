@@ -8,7 +8,7 @@ export default function Animal (req) {
     api.get(`http://localhost:3333/animais/animal/${id}`).then(response => {
       setAnimal(response.data)
     })
-  }, [])
+  }, [id])
 
   animal.map(animal => {
     console.log(animal.nome)
