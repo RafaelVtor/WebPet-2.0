@@ -37,7 +37,7 @@ export default function Animais () {
                   <p>tipo: {animal.tipo}</p>
 
                   <p>
-                    dono:
+                    dono: 
                     <Link to={`/animais/dono/${animal.dono}`}>
                       {animal.dono_nome}
                     </Link>

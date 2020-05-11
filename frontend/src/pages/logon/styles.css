@@ -2,35 +2,43 @@ body {
   padding: 0px;
   margin: 0px;
 }
+p:hover {
+  text-decoration: none;
+}
 
 .corpo {
-  display: grid;
-  
-  justify-content: center;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
   align-content: center;
-  
 }
 
 .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  display: flex;
   width: 100%;
   min-width: 480px;
-
-  justify-content: center;
+  background: aliceblue;
+  justify-content: space-between;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  margin-top: 23%;
- 
-  
+  margin-top: 5%;
+  margin-bottom: 5%;
 
   border-radius: 8px;
-  background: #c4d49f;
+
   padding: 10px;
 }
 
-.form{
-  width: 100%;
+.textos {
+  width: 200px;
+  word-spacing: 2px;
+  padding: 2px;
+}
+
+.botao{
+  display: flex;
+justify-content: space;
+flex-wrap: wrap;
+align-content: center;
 }

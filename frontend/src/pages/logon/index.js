@@ -10,7 +10,7 @@ export default function Logon () {
   const [usuario, setUsuario] = useState([])
   const [id, setNome] = useState([])
   const [senha, setSenha] = useState([])
-  const history = useHistory();
+  const history = useHistory()
 
   async function login (e) {
     e.preventDefault()
@@ -18,10 +18,10 @@ export default function Logon () {
     try {
       const response = await api.post('http://localhost:3333/sessions', {
         id,
-        senha,
-      });
-      console.log(response);
-      alert("Olá "+response.data.nome)
+        senha
+      })
+      console.log(response)
+      alert('Olá ' + response.data.nome)
       history.push('/animais')
     } catch {
       alert('Usuário ou senha incorreta')
@@ -50,8 +50,9 @@ export default function Logon () {
               value={senha}
               onChange={e => setSenha(e.target.value)}
             />
-
-            <button className='button' >Acessar</button>
+            <div className='botao'>
+              <button className='button'>Acessar</button>
+            </div>
           </form>
         </section>
       </div>

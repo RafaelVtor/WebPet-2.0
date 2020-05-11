@@ -21,7 +21,7 @@ p:hover{
   display: flex;
   width: 100%;
   min-width: 480px;
-
+  background: aliceblue;
   justify-content: space-between;
   flex-wrap: wrap;
   justify-content: center;
@@ -30,7 +30,7 @@ p:hover{
   margin-bottom: 5%;
 
   border-radius: 8px;
-  background: #c4d49f;
+  
   padding: 10px;
 }
 
@@ -42,8 +42,9 @@ p:hover{
   justify-content: space-between;
   margin: 20px;
   padding: 10px;
-  border-style: groove;
+  border-radius: 10px;
   text-decoration: none;
+  background: gainsboro;
 }
 
 .img img {
