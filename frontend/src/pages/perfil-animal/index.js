@@ -16,7 +16,7 @@ export default function Animal (req) {
     console.log(animal.nome)
   })
   return (
-    <div>
+    <div className="corpo">
       {animal.map(animal => {
         return (
           <div key={animal.id} className="container">

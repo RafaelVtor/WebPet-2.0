@@ -2,7 +2,7 @@ ul {
   list-style-type: none;
 }
 
-.container {
+div .container {
   display: grid;
   flex-wrap: wrap;
   align-self: center; 

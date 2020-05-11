@@ -56,6 +56,11 @@ export default function Logon () {
           </form>
         </section>
       </div>
+        <div>
+          <p>Não é cadastrado? Acesse <Link to="/cadastro">aqui</Link>
+            
+          </p>
+        </div>
     </div>
   )
 }
